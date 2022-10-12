@@ -1,0 +1,127 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="row">
+        <div class="col-5">
+            <div class="text-content">
+                <h1>
+                  Données
+                </h1>
+                <p>Dans cet ensemble de données, <b>39 classes</b> différentes d'images de feuilles et d'arrière-plan de plantes sont disponibles. L'ensemble de données contenant <b>61 486 images</b>. Pour augmenter la taille de l'ensemble de données, six techniques d'augmentation différentes ont été utilisées : image flipping, Gamma correction, noise injection, PCA color augmentation, rotation, and Scaling. </p>
+                <a href="https://data.mendeley.com/datasets/tywbtsjrjv" target="_blank">Link Dataset</a>
+            </div>
+        </div>
+        <div class="col-7">
+            <div class="hero-img-dataset"></div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="row">
+        <div class="col-5">
+            <div class="text-content">
+                <h1>
+                  Base de données
+                </h1>
+                <p>L'ensemble de données a été transformé et enrichi avec des données sur les symptômes de la maladie et le traitement associé. Toutes les données ont été saisies dans une base de données MySQL. </p>
+                
+            </div>
+        </div>
+        <div class="col-7">
+            <div class="hero-img-bdd"></div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="row">
+            
+            <div class="text-content">
+                <h1>
+                  Model 
+                </h1>
+                <p>Ce projet vise à utiliser un <b>modèle basé sur CNN </b> pour résoudre les problèmes d'identification des maladies foliaires des plantes. Le CNN est une classe d'algorithmes d'apprentissage en profondeur. L'apprentissage en profondeur étend l'apprentissage automatique traditionnel en ajoutant plus de complexité et des représentations de données hiérarchiques dans le modèle. Les CNN profonds ont de nombreuses applications dans la classification d'images, la détection d'objets, la reconnaissance vocale, les systèmes de recommandation et le traitement du langage naturel. </p>
+                <p>Un <b>réseau pré-entraîné</b> est un réseau enregistré qui a été précédemment formé sur un grand ensemble de données, généralement sur une tâche de classification d'images à grande échelle. Si cela l'ensemble de données d'origine est suffisamment grand et suffisamment général, alors la hiérarchie spatiale des entités appris par le réseau pré-entraîné peut effectivement servir de modèle générique du monde visuel, et donc ses fonctionnalités peuvent s'avérer utiles pour de nombreuses visions par ordinateur différentes problèmes, même si ces nouveaux problèmes peuvent impliquer des classes que celles de la tâche d'origine. </p>
+                <p>Par exemple, vous pouvez entraîner un réseau sur <b>ImageNet</b> (où les classes sont principalement des animaux et des objets du quotidien) puis réutilisation ce réseau qualifié pour quelque chose d'aussi lointain que l'identification de meubles dans images. Une telle portabilité des fonctionnalités apprises à travers différents problèmes est un avantage clé d'apprentissage en profondeur par rapport à de nombreuses approches plus anciennes d'apprentissage superficiel, et il rend l'apprentissage en profondeur très efficace pour les problèmes de petites données. Dans ce cas, considérons un grand convnet formé sur le jeu de données ImageNet (1,4 million d'images étiquetées et 1 000 classes différentes). ImageNet contient de nombreux animaux classés, y compris différentes espèces de chats et de chiens, et vous pouvez donc vous attendre à fonctionnent bien sur le problème de classification des chiens contre les chats.</p>
+              </div>
+            
+        </div>
+
+        <div class="row">
+        <div class="col-7">
+          <div class="hero-img-model"></div>
+        </div>
+      </div>
+
+      <div class="row">
+      <div class="text-content">
+      <p>L'apprentissage par transfer <b>( <i>Transfer Learning</i> )</b> est une méthode de partage des connaissances qui réduit la taille des données d'entraînement, le temps et les coûts de calcul lors de la construction de modèles d'apprentissage en profondeur. L'apprentissage par transfert permet de transférer l'apprentissage d'un modèle pré-formé vers un nouveau modèle. L'apprentissage par transfert a été utilisé dans diverses applications, telles que la classification des plantes, la prédiction des défauts logiciels, la reconnaissance des activités et la classification des sentiments. Dans cette recherche, les performances du modèle CNN proposé ont été comparées à des approches d'apprentissage par transfert populaires, telles qu'AlexNet, VGG16, Inception-v3, ResNet50. </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="text-content">
+    <p>Au vu des résultats obtenus, j'ai choisi le modèle MobilNet. La structure de MobileNet: </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-7">
+    <div class="hero-img-mn"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="text-content">
+  <p>Le réglage fin <b>(<i>Fine Tuning</i>)</b> consiste à dégeler(unfreeze) quelques-unes des couches supérieures d'une base de modèle gelée utilisée pour l'extraction de caractéristiques et à entraîner conjointement la partie nouvellement ajoutée du modèle (dans ce cas, le classificateur entièrement connecté) et ces couches supérieures. C'est ce qu'on appelle le réglage fin car il ajuste légèrement les représentations les plus abstraites du modèle réutilisé, afin de les rendre plus pertinentes pour le problème à résoudre.</p>
+  <p>Les étapes pour affiner un réseau sont les suivantes :
+    <ol>
+      <li>Ajoutez votre réseau personnalisé au-dessus d'un réseau de base déjà formé.</li>
+      <li>Gelez le réseau de base.</li>
+      <li>Entraînez la partie que vous avez ajoutée.</li>
+      <li>Libérez certaines couches du réseau de base.</li>
+      <li>Entraînez conjointement ces deux calques et la partie que vous avez ajoutée.</li>
+    </ol>
+  </p>
+</div>
+</div>
+
+
+<div class="row">
+  <div class="text-content">
+  <p>Pourquoi ne pas affiner plus de calques ? Pourquoi ne pas affiner toute la base convolutive ?</p>
+  <p>Vous pourriez. Mais vous devez tenir compte des éléments suivants :
+    <ul>
+      <li>Les couches antérieures de la base convolutive encodent des caractéristiques plus génériques et réutilisables, tandis que les couches supérieures encodent des caractéristiques plus spécialisées. Il est plus utile d'affiner les fonctionnalités les plus spécialisées, car ce sont celles qui doivent être réorientées sur votre nouveau problème. Il y aurait des rendements décroissants rapides dans le réglage fin des couches inférieures.</li>
+      <li>Plus vous vous entraînez avec de paramètres, plus vous risquez de faire du overfitting. La base convolutionnelle a 15 millions de paramètres, il serait donc risqué d'essayer de l'entraîner sur un petit ensemble de données. Ainsi, dans cette situation, c'est une bonne stratégie d'affiner uniquement les deux ou trois couches supérieures de la base convolutive.</li>
+    </ul>
+  </p>
+</div>
+</div>
+
+  <div class="row">
+    <div class="col-7">
+      <div class="hero-img-my"></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
+
+
+
