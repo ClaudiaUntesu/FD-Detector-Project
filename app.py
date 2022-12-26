@@ -7,7 +7,8 @@ from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
 
-filepath = r'C:\Users\claud\Desktop\DEV IA\SEM 16\flask-leaf-disease-prediction-app-main\flask-leaf-disease-prediction-app-main\model.h5'
+#filepath = r'C:\Users\claud\Desktop\DEV IA\SEM 16\flask-leaf-disease-prediction-app-main\flask-leaf-disease-prediction-app-main\model.h5'
+filepath = r'C:\Users\claud\Desktop\DEV IA\Git\FD Detector Project\model.h5'
 model = load_model(filepath)
 print(model)
 
